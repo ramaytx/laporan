@@ -1,0 +1,1 @@
+ALTER TABLE laporan ADD COLUMN temuan TEXT DEFAULT '';

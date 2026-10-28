@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" width="400" height="160">
+  <defs>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF69B4"/>
+      <stop offset="50%" stop-color="#FF1493"/>
+      <stop offset="100%" stop-color="#FF69B4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowSoft">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Soft glow behind chevron -->
+  <path d="M200 18 L350 72 L320 72 L200 28 L80 72 L50 72 Z"
+        fill="#FF1493" opacity="0.35" filter="url(#glowSoft)"/>
+
+  <!-- Roof / Chevron shape -->
+  <path d="M200 18 L350 72 L320 72 L200 28 L80 72 L50 72 Z"
+        fill="url(#roofGrad)" filter="url(#glow)"/>
+
+  <!-- Company name -->
+  <text x="200" y="120" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="bold" letter-spacing="1">
+    <tspan fill="#1e3a5f">PT. New Karya </tspan>
+    <tspan fill="#FF1493">PRO</tspan>
+    <tspan fill="#1e3a5f">perti</tspan>
+  </text>
+</svg>
